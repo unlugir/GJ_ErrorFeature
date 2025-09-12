@@ -10,7 +10,101 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/Library/
+/Temp/
+/obj/
+/Build/
+/Builds/
+/Logs/
+/UserSettings/
 *.log
+# ================= #
+# Content and Fonts #
+# ================= #
+Assets/StreamingAssets/Content
+Assets/Resources/Assets/Fonts
+Assets/DeploymentInfo.json
+Assets/DeploymentInfo.json.meta
+
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+Temp/
+Library/
+MemoryCaptures/
+SerializedBuildInfo/
+Obj/
+Logs/
+UserSettings/
+[Oo]bj/
+#[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+Assets/AssetStoreTools*
+*.apk
+*.psd
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+.vs/
+*.bak
+.vsconfig
+
+# ============================ #
+# Unity3D generated meta files #
+# ============================ #
+*.pidb.meta
+*.pdb.meta
+
+# ======================================= #
+# Unity3D Generated File On Crash Reports #
+# ======================================= #
+sysinfo.txt
+
+# ====== #
+# Builds #
+# ====== #
+*.apk
+*.unitypackage
+
+# ======= #
+# Plugins #
+# ======= #
+
+# === #
+# CMS #
+# === #
+CMS/[Ll]ibrary/
+CMS/[Tt]emp/
+CMS/[Dd]ebug/
+CMS/[Aa]ssets/[Ss]treamingAssets/
+
+# ============= #
+# Asset Bundler #
+# ============= #
+AssetBundles/[Ll]ibrary/
+AssetBundles/[Tt]emp/
+AssetBundles/[Dd]ebug/
+penda-unity/PendaGame/WebGLBuilds
+penda-unity/PendaGame/.idea
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
@@ -18,11 +112,11 @@
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
-/[Mm]emoryCaptures/
-
+/MemoryCaptures/
+/MemoryCaptures/
 # Recordings can get excessive in size
 /[Rr]ecordings/
-
+/Recordings/
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
 
