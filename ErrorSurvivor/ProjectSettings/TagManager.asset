@@ -12,8 +12,8 @@ TagManager:
   - Water
   - UI
   - Projectile
-  - Enemy
-  - 
+  - Characters
+  - Boosts
   - 
   - 
   - 
@@ -50,7 +50,7 @@ TagManager:
   - name: Items
     uniqueID: 2533704943
     locked: 0
-  - name: Projectiles
+  - name: GameContent
     uniqueID: 2269518575
     locked: 0
   m_RenderingLayers:

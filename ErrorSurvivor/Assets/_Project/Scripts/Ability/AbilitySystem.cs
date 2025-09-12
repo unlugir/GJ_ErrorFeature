@@ -17,7 +17,6 @@ namespace ErrorSpace
         private void Start()
         {
             AbilityExecuted.AddListener(OnAbilityExecuted);
-            Initialize();
         }
 
         public void Initialize()
@@ -44,6 +43,7 @@ namespace ErrorSpace
         
         private void Update()
         {
+            if (_abilityController == null) return;
             _abilityController.Update(Time.deltaTime);
             foreach (var ability in _abilityData.Abilities)
             {

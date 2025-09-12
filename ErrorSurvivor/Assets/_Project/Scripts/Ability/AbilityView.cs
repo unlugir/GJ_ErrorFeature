@@ -19,7 +19,7 @@ namespace ErrorSpace
             _abilityStatusViews = new List<AbilityStatusView>();
             
             while (abilityStatusViewContainer.transform.childCount > 0)
-            {
+            { 
                 var obj = abilityStatusViewContainer.transform.GetChild(0);
                 obj.parent = null;
                 Destroy(obj.gameObject);

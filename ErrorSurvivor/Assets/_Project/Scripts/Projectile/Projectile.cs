@@ -11,6 +11,7 @@ namespace ErrorSpace
         public float LifeSpan => Mathf.Clamp01(_life / lifeTime);
         public float moveSpeed = 10f;
         public float explosionRadius = 2f;
+        public float damage = 10f;
         
         [SerializeField] private LayerMask explosionLayerMask;
         [SerializeField] private float lifeTime;
@@ -73,11 +74,23 @@ namespace ErrorSpace
             var overlaps = Physics2D.OverlapCircleAll(this.transform.position, explosionRadius, explosionLayerMask);
             foreach (var overlap in overlaps)
             {
+                var damageable = overlap.gameObject.GetComponent(typeof(IDamageable)) as IDamageable;
+                if (damageable == null) continue;
+                int calculatedDamage = Mathf.RoundToInt(this.damage
+                                              * PlayerSystem.PlayerStats.Stats[Stats.DamageMultiplier]
+                                              * PlayerSystem.PlayerStats.Stats[Stats.ExplosionMultiplier]);
+                damageable.TakeDamage(calculatedDamage);
             }
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
             Die();
+            var damageable = other.gameObject.GetComponent(typeof(IDamageable)) as IDamageable;
+            if (damageable == null) return;
+            int calculatedDamage = Mathf.RoundToInt(this.damage
+                                                    * PlayerSystem.PlayerStats.Stats[Stats.DamageMultiplier]
+                                                    * PlayerSystem.PlayerStats.Stats[Stats.ImpactMultiplier]);
+            damageable.TakeDamage(calculatedDamage);
         }
     }
 }

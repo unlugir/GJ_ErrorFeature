@@ -8,23 +8,17 @@ namespace ErrorSpace
 {
     public class ProjectileSystem : MonoBehaviour
     {
-        private List<Projectile> _projectiles;
+        [SerializeField] private PlayerSystem playerSystem;
 
-        private void Start()
-        {
-            _projectiles = new List<Projectile>();
-            Initialize();
-        }
+        private List<Projectile> _projectiles = new();
 
-        public async UniTask Initialize()
+        public void Initialize()
         {
-            while (transform.childCount > 0)
+            foreach (var projectile in _projectiles)
             {
-                var obj = transform.GetChild(0);
-                obj.parent = null;
-                Destroy(obj.gameObject);
-                await UniTask.WaitForEndOfFrame();
+                Destroy(projectile.gameObject);
             }
+            _projectiles.Clear();
         }
         
         public void Spawn(Ability projectileAbility)
@@ -36,6 +30,10 @@ namespace ErrorSpace
                 return;
             }
             var projectile = Instantiate(prefab, this.transform);
+            projectile.transform.position = PlayerSystem.Player.transform.position;
+            
+            float angle = Mathf.Atan2(PlayerSystem.Player.LookDirection.y, PlayerSystem.Player.LookDirection.x) * Mathf.Rad2Deg;
+            projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             
             projectile.Initialize(this);
             projectile.SetVFXColor(projectileAbility.Config.RelatedColor);

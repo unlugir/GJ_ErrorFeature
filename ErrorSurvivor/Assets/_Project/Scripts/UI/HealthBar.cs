@@ -29,5 +29,15 @@ namespace ErrorSpace
         {
             UpdateBar();
         }
+
+        private void Update()
+        {
+            if (PlayerSystem.Player == null)
+                health += 1;
+            else
+                health = (sbyte)PlayerSystem.Player.HealthDamageable.Health;
+            
+            UpdateBar();
+        }
     }
 }
