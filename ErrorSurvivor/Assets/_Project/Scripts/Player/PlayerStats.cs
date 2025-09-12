@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace ErrorSpace
 {
+
     public class PlayerStats
     {
         public sbyte Health;

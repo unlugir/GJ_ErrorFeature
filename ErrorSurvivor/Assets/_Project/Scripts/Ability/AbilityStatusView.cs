@@ -25,6 +25,10 @@ namespace ErrorSpace
             level.text = ability.Level.ToString();
             icon.sprite = ability.Config.Icon;
             cooldown.fillAmount = ability.Cooldown01;
+
+            var color = ability.Config.RelatedColor;
+            color.a = cooldown.color.a;
+            cooldown.color = color;
         }
 
         public void UpdateAbilityStatus()
