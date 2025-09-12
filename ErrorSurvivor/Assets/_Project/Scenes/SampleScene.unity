@@ -1232,39 +1232,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 65773800937555463, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_Color.b
-      value: 0.10835825
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 65773800937555463, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_Color.g
-      value: 0.51968503
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 65773800937555463, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_Color.r
-      value: 0.36455905
+      value: 0.759
       objectReference: {fileID: 0}
     - target: {fileID: 65773800937555463, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_FillAmount
-      value: 0
+      value: 0.5703125
       objectReference: {fileID: 0}
     - target: {fileID: 231157788502644339, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_text
-      value: 66
+      value: -73
       objectReference: {fileID: 0}
     - target: {fileID: 1769305607300021826, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_Color.b
-      value: 0.10835825
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1769305607300021826, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_Color.g
-      value: 0.51968503
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1769305607300021826, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_Color.r
-      value: 0.36455905
+      value: 0.759
       objectReference: {fileID: 0}
     - target: {fileID: 1769305607300021826, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_FillAmount
-      value: 0.51968503
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_Pivot.x
@@ -1276,19 +1276,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1316,15 +1316,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1352,7 +1352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5588308993130128377, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
       propertyPath: health
-      value: 66
+      value: -73
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
