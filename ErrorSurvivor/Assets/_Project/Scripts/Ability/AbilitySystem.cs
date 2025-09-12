@@ -8,9 +8,10 @@ namespace ErrorSpace
     {
         public static readonly UnityEvent<Ability> AbilityExecuted = new();
         
+        [SerializeField] private ProjectileSystem projectileSystem;
         [SerializeField] private AbilityConfig[] abilityConfigs;
-       
         [SerializeField] private AbilityView abilityView;
+        
         private AbilityViewController _abilityController;
         private AbilityData _abilityData;
         private void Start()
@@ -31,7 +32,14 @@ namespace ErrorSpace
         
         private void OnAbilityExecuted(Ability ability)
         {
-            
+            switch (ability.Config.Type)
+            {
+                case AbilityType.Projectile:
+                    projectileSystem.Spawn(ability);
+                    break;
+                case AbilityType.Boost:
+                    break;
+            }
         }
         
         private void Update()
