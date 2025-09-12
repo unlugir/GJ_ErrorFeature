@@ -16,6 +16,6 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 7c49585f47a5c5c41b6800cde3c418f0, type: 3}
   Name: Pumpkin
   Description: Pumpkin
-  BaseCooldown: 0.03
+  BaseCooldown: 0.45
   Prefab: {fileID: 2642614263457061346, guid: fcd4cd6beccccaf4d9f4ef7a6ae55915, type: 3}
   RelatedColor: {r: 1, g: 0.77412665, b: 0, a: 1}

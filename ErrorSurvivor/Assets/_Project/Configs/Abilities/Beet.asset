@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6617a31eb6af66443aa1aa1f94bd9ce2, type: 3}
-  m_Name: Cherrry
+  m_Name: Beet
   m_EditorClassIdentifier: 
   Type: 0
-  Icon: {fileID: 21300000, guid: 416c62e7b9bafc142b0f05547b7bfe41, type: 3}
-  Name: Cherry
-  Description: Cherry
-  BaseCooldown: 3
-  Prefab: {fileID: 0}
-  RelatedColor: {r: 1, g: 0.37324387, b: 0, a: 1}
+  Icon: {fileID: 21300000, guid: d953b3b6d92de284080420f519a9bf62, type: 3}
+  Name: Beet
+  Description: Beet
+  BaseCooldown: 1
+  Prefab: {fileID: 1361911254598277366, guid: ca375367dae3f914cbc6e23597737dbb, type: 3}
+  RelatedColor: {r: 1, g: 0, b: 0.1245265, a: 1}

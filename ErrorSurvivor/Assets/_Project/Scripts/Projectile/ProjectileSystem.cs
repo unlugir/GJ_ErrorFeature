@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,8 +13,20 @@ namespace ErrorSpace
         private void Start()
         {
             _projectiles = new List<Projectile>();
+            Initialize();
         }
 
+        public async UniTask Initialize()
+        {
+            while (transform.childCount > 0)
+            {
+                var obj = transform.GetChild(0);
+                obj.parent = null;
+                Destroy(obj.gameObject);
+                await UniTask.WaitForEndOfFrame();
+            }
+        }
+        
         public void Spawn(Ability projectileAbility)
         {
             var prefab = projectileAbility.Config.Prefab;

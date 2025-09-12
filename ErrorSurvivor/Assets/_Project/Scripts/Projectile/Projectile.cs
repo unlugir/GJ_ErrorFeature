@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -8,10 +9,10 @@ namespace ErrorSpace
     public class Projectile : MonoBehaviour
     {
         public float LifeSpan => Mathf.Clamp01(_life / lifeTime);
-        
         public float moveSpeed = 10f;
         public float explosionRadius = 2f;
-
+        
+        [SerializeField] private LayerMask explosionLayerMask;
         [SerializeField] private float lifeTime;
         [SerializeField] private bool damageOnImpact;
         [SerializeField] private bool explodeOnDeath;
@@ -58,13 +59,25 @@ namespace ErrorSpace
         }
         private void Die()
         {
+            if (_dead) return;
             _dead = true;
             _life = 0;
             explodeParticles.Play();
             spriteRenderer.enabled = false;
+            if (explodeOnDeath)
+                Explode();
+        }
+
+        private void Explode()
+        {
+            var overlaps = Physics2D.OverlapCircleAll(this.transform.position, explosionRadius, explosionLayerMask);
+            foreach (var overlap in overlaps)
+            {
+            }
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
+            Die();
         }
     }
 }
