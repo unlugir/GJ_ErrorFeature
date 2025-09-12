@@ -17,8 +17,8 @@ namespace ErrorSpace
         private void UpdateBar()
         {
             secondaryFill.fillAmount = health >= 0 ? 0 : health / (float)sbyte.MinValue ;
-            mainFill.fillAmount = health >= 0 ? health/(float)sbyte.MaxValue : 0;
-            var color = gradient.Evaluate((float)health / sbyte.MaxValue);
+            mainFill.fillAmount = health >= 0 ? health / (float)sbyte.MaxValue : 0;
+            var color = gradient.Evaluate(health / (float)sbyte.MaxValue);
 
             mainFill.color = color; 
             secondaryFill.color = color;
