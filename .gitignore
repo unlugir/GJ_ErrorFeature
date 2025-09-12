@@ -46,7 +46,7 @@ UserSettings/
 Assets/AssetStoreTools*
 *.apk
 *.psd
-
+.idea/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
