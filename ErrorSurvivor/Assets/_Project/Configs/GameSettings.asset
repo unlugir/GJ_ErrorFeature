@@ -33,24 +33,64 @@ MonoBehaviour:
     value: 1
   - stat: 9
     value: 0
-  _statSprites:
+  _statConfigs:
   - stat: 0
-    sprite: {fileID: 0}
+    config:
+      name: Health
+      description: Health
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 1
-    sprite: {fileID: 0}
+    config:
+      name: Experience
+      description: Experience
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 2
-    sprite: {fileID: 0}
+    config:
+      name: Move Speed
+      description: Move Speed
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 3
-    sprite: {fileID: 0}
+    config:
+      name: +Explosion Damage
+      description: +Explosion Damage
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 4
-    sprite: {fileID: 0}
+    config:
+      name: +Impact Damage
+      description: +Impact Damage
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 5
-    sprite: {fileID: 0}
+    config:
+      name: +Damage
+      description: +Damage
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 6
-    sprite: {fileID: 0}
+    config:
+      name: PickUp Radius
+      description: PickUp Radius
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 7
-    sprite: {fileID: 0}
+    config:
+      name: Experience Multiplier
+      description: Experience Multiplier
+      icon: {fileID: 0}
+      invertBoost: 0
   - stat: 8
-    sprite: {fileID: 0}
+    config:
+      name: Reduce Cooldowns
+      description: Reduce Cooldowns
+      icon: {fileID: 0}
+      invertBoost: 1
   - stat: 9
-    sprite: {fileID: 0}
+    config:
+      name: Invert Controls
+      description: Invert Controls
+      icon: {fileID: 0}
+      invertBoost: 0

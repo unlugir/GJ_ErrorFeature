@@ -24,9 +24,13 @@ namespace ErrorSpace
 
         public bool CanExecute()
         {
-            return Cooldown01 <= 0;
+            return Level != 0 && Cooldown01 <= 0;
         }
 
+        public void LevelUp()
+        {
+            Level++;
+        }
         public void Execute()
         {
             LastUseTime = DateTime.UtcNow;
@@ -37,7 +41,7 @@ namespace ErrorSpace
             var ability = new Ability();
             ability.Config = config;
             ability.LastUseTime = DateTime.UtcNow.AddSeconds(-ability.Cooldown);
-            ability.Level = 0;
+            ability.Level = config.Initial ? 1 : 0;
             return ability;
         }
     }

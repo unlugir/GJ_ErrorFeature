@@ -15,7 +15,16 @@ namespace ErrorSpace
     public class StatSpritePair
     {
         public Stats stat;
-        public Sprite sprite;
+        public StatConfig config;
+    }
+
+    [System.Serializable]
+    public class StatConfig
+    {
+        public string name;
+        public string description;
+        public Sprite icon;
+        public bool invertBoost;
     }
     
     [CreateAssetMenu(fileName = "GameSettings", menuName = "Game/GameSettings")]
@@ -23,13 +32,13 @@ namespace ErrorSpace
     {
         public static GameSettings Settings;
         public List<StatValuePair> initialStats;
-        public Dictionary<Stats, Sprite> statSprites;
+        public Dictionary<Stats, StatConfig> statConfigs;
         
-        [SerializeField] private List<StatSpritePair> _statSprites;
+        [SerializeField] private List<StatSpritePair> _statConfigs;
         
         private void PackSprites()
         {
-            statSprites = _statSprites.ToDictionary(s => s.stat, s => s.sprite);
+            statConfigs = _statConfigs.ToDictionary(s => s.stat, s => s.config);
         }
 
         private void OnValidate()

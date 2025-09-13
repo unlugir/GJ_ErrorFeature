@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -27,6 +28,11 @@ namespace ErrorSpace
                 _abilityData.Abilities.Add(Ability.Build(abilityConfig));
             }
             _abilityController = new AbilityViewController(abilityView, _abilityData);
+        }
+
+        public IReadOnlyList<Ability> GetAbilities()
+        {
+            return _abilityData.Abilities;
         }
         
         private void OnAbilityExecuted(Ability ability)

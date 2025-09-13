@@ -19,6 +19,7 @@ namespace ErrorSpace
         public float BaseCooldown;
         public Projectile Prefab;
         public Color RelatedColor;
+        public bool Initial;
         private void OnValidate()
         {
             if (Type == AbilityType.Projectile && Prefab == null)

@@ -38,7 +38,7 @@ namespace ErrorSpace
                 gameObject.SetActive(false);
                 return;
             }
-            gameObject.SetActive(_ability.Level >= 0);
+            gameObject.SetActive(_ability.Level > 0);
             level.text = _ability.Level.ToString();
             cooldown.fillAmount = _ability.Cooldown01;
         }
