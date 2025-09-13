@@ -8,6 +8,8 @@ namespace ErrorSpace
     public class BoostSystem : MonoBehaviour
     {
         public static UnityEvent<Boost> OnBoostPickedUp { get; private set; } = new();
+        public static UnityEvent<int> OnLevelUp { get; private set; } = new();
+        
         private List<Boost> _boosts = new();
 
         private void Start()
@@ -23,10 +25,16 @@ namespace ErrorSpace
         {
             if (!Mathf.Approximately(boost.Duration, -1))
                 _boosts.Add(boost);
+            
+            var oldLevel = PlayerSystem.PlayerStats.Level;
             foreach (var statValue in boost.Stats)
             {
                 PlayerSystem.PlayerStats.Stats[statValue.stat] += statValue.value;
             }
+            var newLevel = PlayerSystem.PlayerStats.Level;
+            
+            if (newLevel > oldLevel)
+                OnLevelUp.Invoke(newLevel - oldLevel);
         }
 
         public void RemoveBoost(Boost boost)

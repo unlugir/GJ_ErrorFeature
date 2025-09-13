@@ -21,10 +21,12 @@ namespace ErrorSpace
     [System.Serializable]
     public class PlayerStats
     {
+        public const int ExperiencePerLevel = 25;
         public Dictionary<Stats, float> Stats;
+        public int Level => Mathf.FloorToInt(Stats[ErrorSpace.Stats.Experience] / ExperiencePerLevel); 
+        public float LevelProgression => (Stats[ErrorSpace.Stats.Experience] - Level * ExperiencePerLevel) / ExperiencePerLevel;
         private PlayerStats()
-        {
-            
+        { 
         }
 
         public static PlayerStats Build()

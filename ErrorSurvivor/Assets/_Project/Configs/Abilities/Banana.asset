@@ -16,6 +16,6 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 61f2e08322087be4fb90bf1e95ad2e54, type: 3}
   Name: Banana
   Description: Banana
-  BaseCooldown: 1
+  BaseCooldown: 1.07
   Prefab: {fileID: 362352773413842236, guid: b9ce3a5c15e70ab48936877c26364744, type: 3}
   RelatedColor: {r: 1, g: 0.8455281, b: 0, a: 1}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -8,6 +9,7 @@ namespace ErrorSpace
     public class AbilityData
     {
         public List<Ability> Abilities = new List<Ability>();
+        public int Level => Abilities.Sum(a => a.Level);
     }
 
     public class Ability
