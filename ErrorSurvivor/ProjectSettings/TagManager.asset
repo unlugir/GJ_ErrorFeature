@@ -53,5 +53,8 @@ TagManager:
   - name: GameContent
     uniqueID: 2269518575
     locked: 0
+  - name: Clouds
+    uniqueID: 3563451325
+    locked: 0
   m_RenderingLayers:
   - Default
