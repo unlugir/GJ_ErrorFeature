@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 namespace ErrorSpace
@@ -18,6 +19,7 @@ namespace ErrorSpace
         [SerializeField] private int maxEnemyCount = 200;
         [SerializeField] private int maxEnemyInWaveCount = 50;
         [SerializeField] private float waveTimeDelay = 10f;
+        [SerializeField] private Tilemap backgroundTilemap;
 
         private int currentEnemyCount = 0;
         private bool shouldSpawn = true;
@@ -43,13 +45,34 @@ namespace ErrorSpace
             for (int index = 0; index < maxEnemyInWaveCount; index++)
             {
                 if(maxEnemyCount <= currentEnemyCount) return;
-            
-                Enemy spawnedEnemy = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], GetRandomPointOutsideTheCamera(), Quaternion.identity, spawnRoot);
+
+                var randomPoint = TryGetRandomPointInBounds();
+                if(randomPoint.Equals(Vector3.zero)) continue;
+                
+                Enemy spawnedEnemy = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], randomPoint, Quaternion.identity, spawnRoot);
                 spawnedEnemy.Initialise();
                 
                 spawnedEnemy.OnDeath.AddListener(() => { currentEnemyCount--;});
                 currentEnemyCount++;
             }
+        }
+
+        private Vector3 TryGetRandomPointInBounds()
+        {
+            for (int index = 0; index < 10; index++)
+            {
+                Bounds local = backgroundTilemap.localBounds;
+                Vector3 worldMin = backgroundTilemap.transform.TransformPoint(local.min);
+                Vector3 worldMax = backgroundTilemap.transform.TransformPoint(local.max);
+
+                Bounds world = new Bounds();
+                world.SetMinMax(Vector3.Min(worldMin, worldMax), Vector3.Max(worldMin, worldMax));
+
+                var randomPoint = GetRandomPointOutsideTheCamera();
+                if(world.Contains(randomPoint)) return randomPoint;
+            }
+
+            return Vector3.zero;
         }
 
         private Vector3 GetRandomPointOutsideTheCamera()

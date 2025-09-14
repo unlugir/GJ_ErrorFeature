@@ -67541,6 +67541,7 @@ MonoBehaviour:
   maxEnemyCount: 200
   maxEnemyInWaveCount: 50
   waveTimeDelay: 10
+  backgroundTilemap: {fileID: 1322429287}
 --- !u!1 &1888974431
 GameObject:
   m_ObjectHideFlags: 0
