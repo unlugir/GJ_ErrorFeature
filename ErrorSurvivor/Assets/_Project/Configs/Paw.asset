@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Paw
   m_EditorClassIdentifier: 
   CollapseEditions: 0
-  SFXName: 
+  SFXName: Paw
   SFXLayers:
   - LayerName: 
-    SFX: {fileID: 0}
+    SFX: {fileID: 8300000, guid: 09f8dc09efedc414784e7ba556669245, type: 3}
     RandomizeVolume: 0
-    FixedVolume: 1
+    FixedVolume: 0.3
     MinVolume: 0.5
     MaxVolume: 1
-    RandomizePitch: 0
+    RandomizePitch: 1
     FixedPitch: 1
-    MinPitch: 0.75
-    MaxPitch: 1.5
+    MinPitch: 0.9289474
+    MaxPitch: 1.2263157
     DelaySFX: 0
     RandomizeDelay: 0
     FixedDelayTime: 0

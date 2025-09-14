@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 890555835910467761, guid: e63146c7a5a61844ba275d3014108452, type: 3}
       propertyPath: boost.Stats.Array.data[0].value
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 890555835910467761, guid: e63146c7a5a61844ba275d3014108452, type: 3}
       propertyPath: boost.Stats.Array.data[1].value

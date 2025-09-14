@@ -20,6 +20,7 @@ namespace ErrorSpace
         [SerializeField] private ProjectileScenario scenario;
         [SerializeField] private ParticleSystem explodeParticles;
         [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private SFXObject deathSFX;
         private ProjectileSystem _projectileSystem;
         private float _life;
         private bool _dead;
@@ -65,6 +66,7 @@ namespace ErrorSpace
             _life = 0;
             explodeParticles.Play();
             spriteRenderer.enabled = false;
+            SFXManager.Main.Play(deathSFX);
             if (explodeOnDeath)
                 Explode();
         }

@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   explosionRadius: 2
+  damage: 10
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -181,6 +182,7 @@ MonoBehaviour:
   scenario: {fileID: 0}
   explodeParticles: {fileID: 264411745409190823}
   spriteRenderer: {fileID: 2651517340523664206}
+  deathSFX: {fileID: 11400000, guid: fc3d9bb9fa289994e8975f72270d93df, type: 2}
 --- !u!1001 &5108901402767090037
 PrefabInstance:
   m_ObjectHideFlags: 0
