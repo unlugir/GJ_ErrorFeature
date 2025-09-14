@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0161b7119df09fc4eb979dcf27f6853b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySightRange: 20
+  enemySightRange: 100
   enemyMoveRange: 200
   destinationUpdateTime: 0.2
 --- !u!114 &4030481929109642308

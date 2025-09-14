@@ -23,8 +23,14 @@ namespace ErrorSpace
         {
             enemyPathfinding.OnDestinationUpdated.AddListener(SwapSprite);
             enemySprite.sprite = enemyVariation[Random.Range(0, enemyVariation.Count)];
+            Health = HealthFormula(Health, PlayerSystem.PlayerStats.Level);
         }
 
+        private int HealthFormula(int defaultHealth, int level)
+        {
+            defaultHealth += Mathf.RoundToInt(level * 1.5f);
+            return defaultHealth;
+        }
         private void SwapSprite()
         {
             enemySprite.flipX = gameObject.transform.position.x - PlayerSystem.Player.transform.position.x < 0;
