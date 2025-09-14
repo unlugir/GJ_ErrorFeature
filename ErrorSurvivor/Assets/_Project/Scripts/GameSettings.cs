@@ -33,7 +33,8 @@ namespace ErrorSpace
         public static GameSettings Settings;
         public List<StatValuePair> initialStats;
         public Dictionary<Stats, StatConfig> statConfigs;
-        
+        public float cooldownReductionPerLevel = 0.05f;
+        public float damageIncreasePerLevel = 0.05f;
         [SerializeField] private List<StatSpritePair> _statConfigs;
         
         private void PackSprites()

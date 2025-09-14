@@ -19,3 +19,4 @@ MonoBehaviour:
   BaseCooldown: 1
   Prefab: {fileID: 1361911254598277366, guid: ca375367dae3f914cbc6e23597737dbb, type: 3}
   RelatedColor: {r: 1, g: 0, b: 0.1245265, a: 1}
+  Initial: 0

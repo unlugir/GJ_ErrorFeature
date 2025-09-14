@@ -34,8 +34,9 @@ namespace ErrorSpace
             
             float angle = Mathf.Atan2(PlayerSystem.Player.LookDirection.y, PlayerSystem.Player.LookDirection.x) * Mathf.Rad2Deg;
             projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            
+          
             projectile.Initialize(this);
+            projectile.damage += (GameSettings.Settings.damageIncreasePerLevel * (projectileAbility.Level - 1));
             projectile.SetVFXColor(projectileAbility.Config.RelatedColor);
             _projectiles.Add(projectile);
         }
