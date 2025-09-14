@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace ErrorSpace
 {
@@ -70,6 +71,22 @@ namespace ErrorSpace
         public void SpawnRandomBoost(Vector3 position)
         {
             //https://music.youtube.com/watch?v=3A2x-7HawDc&list=RDAMVMA0Kk0zcuAy8
+            if (Random.Range(1, 10) == 1)
+            {
+                WorldBoost boost;
+                if (Random.Range(0, 2) == 1)
+                    boost = _healthPool.FirstOrDefault(e => !e.gameObject.activeSelf);
+                else
+                    boost = _speedPool.FirstOrDefault(e => !e.gameObject.activeSelf);
+                if (boost != null)
+                {
+                    boost.transform.position = position;
+                    boost.gameObject.SetActive(true);
+                    return;
+                }
+                //else spawn exp
+            }
+            
             var exp = _experiencePool.FirstOrDefault(e => !e.gameObject.activeSelf);
             if (exp == null)
             {
