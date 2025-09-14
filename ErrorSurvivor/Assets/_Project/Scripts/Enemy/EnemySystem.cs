@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -18,23 +20,39 @@ namespace ErrorSpace
         [SerializeField] private int maxEnemyInWaveCount = 50;
 
         private int currentEnemyCount = 0;
+        private bool shouldSpawn = true;
         
         public void Start()
         {
-          
-                GenerateWave(); 
+            GenerateEnemies();
         }
+
+        public async void GenerateEnemies()
+        {
+            while (shouldSpawn)
+            {
+                await UniTask.Delay(TimeSpan.FromSeconds(1), ignoreTimeScale: false);
+                GenerateWave();
+            }
+        }
+        
 
         public void GenerateWave()
         {
-            for (int index = 0; index < maxEnemyCount; index++)
+            Debug.Log(currentEnemyCount);
+            for (int index = 0; index < maxEnemyInWaveCount; index++)
             {
+                if(maxEnemyCount <= currentEnemyCount) return;
+                
                 int randomSpawnerIndex = Random.Range(0, spawnLocations.Count);
             
                 var spawnLocation = RandomPointInBounds(spawnLocations[randomSpawnerIndex].bounds);
             
                 Enemy spawnedEnemy = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], spawnLocation, Quaternion.identity, spawnRoot);
                 spawnedEnemy.Initialise();
+                
+                spawnedEnemy.OnDeath.AddListener(() => { currentEnemyCount--;});
+                currentEnemyCount++;
             }
         }
         
