@@ -40,5 +40,10 @@ namespace ErrorSpace
             _upgradeData[index].Activate();
             levelUpCards.ForEach(card => card.gameObject.SetActive(false));
         }
+
+        public void Hide()
+        {
+            levelUpCards.ForEach(card => card.gameObject.SetActive(false));
+        }
     }
 }

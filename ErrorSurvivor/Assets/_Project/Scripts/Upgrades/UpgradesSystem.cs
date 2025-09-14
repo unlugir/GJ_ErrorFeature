@@ -16,6 +16,7 @@ namespace ErrorSpace
         private System.Random _random = new();
         private void Start()
         {
+            PlayerSystem.OnPlayerDeath.AddListener(levelUpView.Hide);
             BoostSystem.OnLevelUp.AddListener(OnLevelUp);
         }
 
