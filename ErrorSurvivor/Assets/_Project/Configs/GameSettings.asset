@@ -38,59 +38,59 @@ MonoBehaviour:
     config:
       name: Health
       description: Health
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: f30cb31f79b97d044a6da63376417dd6, type: 3}
       invertBoost: 0
   - stat: 1
     config:
       name: Experience
       description: Experience
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: c3b8e929901634c4db5ca3e2c88786ce, type: 3}
       invertBoost: 0
   - stat: 2
     config:
       name: Move Speed
       description: Move Speed
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 0e9cf6ec84fcbd74b89716da74e797ed, type: 3}
       invertBoost: 0
   - stat: 3
     config:
       name: +Explosion Damage
       description: +Explosion Damage
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 6034a7cde311c7d4e80e8ade07bc2aec, type: 3}
       invertBoost: 0
   - stat: 4
     config:
       name: +Impact Damage
       description: +Impact Damage
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: a920c349d20774045ab45901b7f6235e, type: 3}
       invertBoost: 0
   - stat: 5
     config:
       name: +Damage
       description: +Damage
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 569254a10e8178548b54b3ff2900cd02, type: 3}
       invertBoost: 0
   - stat: 6
     config:
       name: PickUp Radius
       description: PickUp Radius
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 5c525a90c38d1744daa1c782d14157b4, type: 3}
       invertBoost: 0
   - stat: 7
     config:
       name: Experience Multiplier
       description: Experience Multiplier
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 778552feaccd5ec4fac2b930c15185f0, type: 3}
       invertBoost: 0
   - stat: 8
     config:
       name: Reduce Cooldowns
       description: Reduce Cooldowns
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 26b3eb8b54d614f4fb24a6c9e63b18e7, type: 3}
       invertBoost: 1
   - stat: 9
     config:
       name: Invert Controls
       description: Invert Controls
-      icon: {fileID: 0}
+      icon: {fileID: 21300000, guid: 2c919e4a5d2b7894c8ba018a7427a903, type: 3}
       invertBoost: 0
