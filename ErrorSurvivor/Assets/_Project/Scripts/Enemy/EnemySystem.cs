@@ -19,6 +19,7 @@ namespace ErrorSpace
         [Range(100, 1000)]
         [SerializeField] private int maxEnemyCount = 200;
         [SerializeField] private int maxEnemyInWaveCount = 50;
+        [SerializeField] private int enemyInWavePerLevel = 5;
         [SerializeField] private float waveTimeDelay = 10f;
         [SerializeField] private Tilemap backgroundTilemap;
         [SerializeField] private Camera camera;
@@ -55,7 +56,9 @@ namespace ErrorSpace
 
         private void GenerateWave()
         {
-            for (int index = 0; index < maxEnemyInWaveCount; index++)
+            int enemies = (PlayerSystem.PlayerStats.Level+1) * enemyInWavePerLevel;
+            enemies = Mathf.Min(enemies, maxEnemyInWaveCount);
+            for (int index = 0; index < enemies; index++)
             {
                 if(maxEnemyCount <= _currentEnemyCount) return;
 
