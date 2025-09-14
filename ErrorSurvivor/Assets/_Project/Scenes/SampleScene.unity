@@ -67130,8 +67130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mixer: {fileID: 0}
   ScenePersistent: 0
-  CollapseLibrary: 0
-  TrackLibrary: []
+  CollapseLibrary: 1
+  TrackLibrary:
+  - {fileID: 11400000, guid: ff9fc7fe29551eb48a826a6bb27753d3, type: 2}
 --- !u!114 &1127516017
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ namespace ErrorSpace
 
         private void Start()
         {
+            MusicManager.Main.PlayFromLibrary("Main Track");
             PlayerSystem.OnPlayerDeath.AddListener(()=> menuPanel.SetActive(true));
             //StartGame();
         }
