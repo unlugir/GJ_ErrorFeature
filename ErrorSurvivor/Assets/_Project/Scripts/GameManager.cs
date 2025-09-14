@@ -11,6 +11,7 @@ namespace ErrorSpace
         [SerializeField] private BoostSystem boostSystem;
         [SerializeField] private ProjectileSystem projectileSystem;
         [SerializeField] private UpgradesSystem upgradesSystem;
+        [SerializeField] private EnemySystem enemySystem;
         //keep settings reference just in case its so is not loaded
         [SerializeField] private GameSettings gameSettings;
 
@@ -27,6 +28,7 @@ namespace ErrorSpace
             boostSystem.Initialize();
             abilitySystem.Initialize();
             upgradesSystem.Initialize();
+            enemySystem.Initialize();
         }
 
         private void Update()

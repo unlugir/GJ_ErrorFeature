@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace ErrorSpace
 {
@@ -45,6 +47,12 @@ namespace ErrorSpace
             OnDeath.Invoke();
             EnemySystem.OnDeath.Invoke(this);
             Destroy(this.gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            OnDeath.RemoveAllListeners();
+            OnDamageTaken.RemoveAllListeners();
         }
     }
 }

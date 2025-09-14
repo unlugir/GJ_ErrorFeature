@@ -67462,6 +67462,7 @@ MonoBehaviour:
   boostSystem: {fileID: 193370490}
   projectileSystem: {fileID: 638225566}
   upgradesSystem: {fileID: 1615924966}
+  enemySystem: {fileID: 1713530027}
   gameSettings: {fileID: 11400000, guid: 2047cf60c9ff2e342825fa825f46ccf0, type: 2}
 --- !u!4 &2060466905
 Transform:

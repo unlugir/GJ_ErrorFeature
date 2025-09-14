@@ -61,6 +61,9 @@ namespace ErrorSpace
 
         public void Initialize()
         {
+            _experiencePool.ForEach(e => e.gameObject.SetActive(false));
+            _speedPool.ForEach(e => e.gameObject.SetActive(false));
+            _healthPool.ForEach(e => e.gameObject.SetActive(false));
             _boosts.Clear();
         }
 

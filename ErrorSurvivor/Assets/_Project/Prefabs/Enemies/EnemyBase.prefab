@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6912061539729380432}
   - component: {fileID: 4420362004554673918}
   - component: {fileID: 1807617053673265976}
+  - component: {fileID: 4030481929109642308}
   m_Layer: 7
   m_Name: EnemyBase
   m_TagString: Untagged
@@ -221,3 +222,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0161b7119df09fc4eb979dcf27f6853b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemySightRange: 20
+  enemyMoveRange: 200
+  destinationUpdateTime: 0.2
+--- !u!114 &4030481929109642308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575234287459078029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac6e084372c7844ea530eb21b16a869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1
+  damage: 5
+  attackRate: 1

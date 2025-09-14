@@ -24,11 +24,16 @@ namespace ErrorSpace
         private int currentEnemyCount = 0;
         private bool shouldSpawn = true;
         
-        public void Start()
+        private void Start()
         {
             GenerateEnemies();
         }
 
+        public void Initialize()
+        {
+            
+        }
+        
         private async void GenerateEnemies()
         {
             while (shouldSpawn)
