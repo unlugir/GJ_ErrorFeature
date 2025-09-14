@@ -21,6 +21,12 @@ namespace ErrorSpace
             Health -= damage;
             
             //CORE FEATURE 
+            if (PlayerSystem.PlayerStats.Level > 15)
+            {//we lied about 0 health death only :)
+                if (Health == 2 || Health == -2)
+                    Health = 0;
+            }
+            
             if (Health == 0)
                 Die();
         }
