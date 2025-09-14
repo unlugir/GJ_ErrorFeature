@@ -1,5 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 
 namespace ErrorSpace
@@ -15,14 +16,22 @@ namespace ErrorSpace
         //keep settings reference just in case its so is not loaded
         [SerializeField] private GameSettings gameSettings;
 
+        //fast ui
+        [SerializeField] private GameObject menuPanel;
+        [SerializeField] private TMP_Text scoreText;
         
+        public static int Score { get; set; }
+
         private void Start()
         {
-            StartGame();
+            PlayerSystem.OnPlayerDeath.AddListener(()=> menuPanel.SetActive(true));
+            //StartGame();
         }
 
         public void StartGame()
         {
+            Score = 0;
+            menuPanel.SetActive(false);
             projectileSystem.Initialize();
             playerSystem.Initialize();
             boostSystem.Initialize();
@@ -30,11 +39,10 @@ namespace ErrorSpace
             upgradesSystem.Initialize();
             enemySystem.Initialize();
         }
-
+        
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.R))
-                StartGame();
+            scoreText.text = $"Score: {Score.ToString()}";
         }
     }
 }

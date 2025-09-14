@@ -67193,7 +67193,7 @@ MonoBehaviour:
   boostSystem: {fileID: 193370490}
   abilitySystem: {fileID: 1091987732}
   levelUpView: {fileID: 2108003175}
-  upgradeableStats: 03000000040000000500000006000000070000000800000002000000
+  upgradeableStats: 030000000400000005000000070000000800000002000000
   newAbilityText: <color=green>New!</color>\n
 --- !u!4 &1615924967
 Transform:

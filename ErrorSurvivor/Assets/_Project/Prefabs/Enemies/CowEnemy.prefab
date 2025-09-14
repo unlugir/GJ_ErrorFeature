@@ -57,8 +57,12 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8642693374569868114, guid: 737cb0d82a9361a448aaa77ba88a63f3, type: 3}
+      propertyPath: score
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642693374569868114, guid: 737cb0d82a9361a448aaa77ba88a63f3, type: 3}
       propertyPath: <Health>k__BackingField
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

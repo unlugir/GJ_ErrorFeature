@@ -50,6 +50,9 @@ namespace ErrorSpace
         private void Update()
         {
             if (_abilityController == null) return;
+            if (PlayerSystem.Player == null) return;
+            if (PlayerSystem.Player.HealthDamageable.IsDead) return;
+
             _abilityController.Update(Time.deltaTime);
             foreach (var ability in _abilityData.Abilities)
             {

@@ -38,7 +38,13 @@ namespace ErrorSpace
         
         private IEnumerator GenerateEnemies()
         {
-            while (_shouldSpawn)
+            while (spawnRoot.childCount > 0)
+            {
+                Destroy(spawnRoot.GetChild(0).gameObject);
+                yield return new WaitForEndOfFrame();
+            }
+            yield return new WaitUntil(() => PlayerSystem.Player != null);
+            while (!PlayerSystem.Player.HealthDamageable.IsDead)
             {
                 GenerateWave();
                 yield return new WaitForSeconds(waveTimeDelay);

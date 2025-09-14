@@ -18,7 +18,7 @@ namespace ErrorSpace
         [SerializeField] private List<Sprite> enemyVariation;
         [SerializeField] private SpriteRenderer enemySprite;
         [SerializeField] private EnemyPathfinding enemyPathfinding;
-        
+        [SerializeField] private int score;
         public void Initialise()
         {
             enemyPathfinding.OnDestinationUpdated.AddListener(SwapSprite);
@@ -52,6 +52,7 @@ namespace ErrorSpace
             IsDead = true;
             OnDeath.Invoke();
             EnemySystem.OnDeath.Invoke(this);
+            GameManager.Score += score;
             Destroy(this.gameObject);
         }
 

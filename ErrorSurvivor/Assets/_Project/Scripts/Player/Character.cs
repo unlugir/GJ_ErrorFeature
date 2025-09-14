@@ -24,8 +24,8 @@ namespace ErrorSpace
         }
         public void InputUpdate(PlayerInput playerInput, float deltaTime)
         {
-            //_navMeshAgent.M
-            //_navMeshAgent.Move(playerInput.Direction * deltaTime);
+            if (HealthDamageable.IsDead) return;
+
             LookDirection = (playerInput.MouseWorldPosition - transform.position).normalized;
             transform.Translate(playerInput.Direction * deltaTime);  
         }

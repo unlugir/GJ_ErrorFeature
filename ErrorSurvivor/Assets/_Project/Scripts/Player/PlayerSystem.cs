@@ -1,11 +1,13 @@
 using Cysharp.Threading.Tasks;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ErrorSpace
 {
     public class PlayerSystem : MonoBehaviour
     {
+        public static UnityEvent OnPlayerDeath { get; private set; }= new();
         public static Character Player { get; private set; }
         public static PlayerStats PlayerStats { get; private set; }
 
@@ -26,7 +28,7 @@ namespace ErrorSpace
             
             Player = Instantiate(playerCharacterPrefab, this.transform);
             Player.Initialize(new PlayerHealth());
-            
+            Player.HealthDamageable.OnDeath.AddListener(() => OnPlayerDeath.Invoke());
             playerCamera.Follow = Player.transform;
             _initialized = true;
         }
