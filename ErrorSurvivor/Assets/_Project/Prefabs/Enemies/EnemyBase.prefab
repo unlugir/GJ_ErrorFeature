@@ -113,7 +113,7 @@ MonoBehaviour:
   - {fileID: -5770714813506183258, guid: 76b2b36ec3ebbec4c91ae59fd9d3e49e, type: 3}
   - {fileID: -7729526031309585338, guid: 76b2b36ec3ebbec4c91ae59fd9d3e49e, type: 3}
   enemySprite: {fileID: 3581306253909012812}
-  enemyPathfinding: {fileID: 0}
+  enemyPathfinding: {fileID: 1807617053673265976}
 --- !u!195 &5718588049218014260
 NavMeshAgent:
   m_ObjectHideFlags: 0

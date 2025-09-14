@@ -26,6 +26,7 @@ namespace ErrorSpace
                 return;
             
             navMeshAgent.SetDestination(PlayerSystem.Player.transform.position);
+            OnDestinationUpdated?.Invoke();
         }
     }
 }

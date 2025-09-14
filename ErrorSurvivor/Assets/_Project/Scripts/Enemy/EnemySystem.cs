@@ -41,7 +41,6 @@ namespace ErrorSpace
 
         private void GenerateWave()
         {
-            Debug.Log(currentEnemyCount);
             for (int index = 0; index < maxEnemyInWaveCount; index++)
             {
                 if(maxEnemyCount <= currentEnemyCount) return;

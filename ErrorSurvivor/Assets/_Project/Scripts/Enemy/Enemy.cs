@@ -19,13 +19,13 @@ namespace ErrorSpace
         
         public void Initialise()
         {
-            //enemyPathfinding.OnDestinationUpdated
+            enemyPathfinding.OnDestinationUpdated.AddListener(SwapSprite);
             enemySprite.sprite = enemyVariation[Random.Range(0, enemyVariation.Count)];
         }
 
         private void SwapSprite()
         {
-            
+            enemySprite.flipX = gameObject.transform.position.x - PlayerSystem.Player.transform.position.x < 0;
         }
 
        
