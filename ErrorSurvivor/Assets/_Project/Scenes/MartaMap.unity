@@ -67258,8 +67258,12 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 2311920406561606080, guid: 4002777c7d54a4b48aa6449ff2e952c8, type: 3}
   - {fileID: 4973227989105417330, guid: e4dadcf2ad57aaa41aaef1ec4157a238, type: 3}
+  - {fileID: 3442260094669578423, guid: 0abeed6484fb9af4ab5b736a15e488cc, type: 3}
+  - {fileID: 813661172607942565, guid: 743a6b99d2886f04094f91f170e2c2e1, type: 3}
   - {fileID: 5976172510253345511, guid: 73df96be7700277499cb2eb87a2dcf1c, type: 3}
   - {fileID: 3313843491621326819, guid: 6779d061885d27a4b953a64b54ceeb27, type: 3}
+  - {fileID: 4336939823745012131, guid: a36a49148caad45458f9ed5fdfd691ca, type: 3}
+  - {fileID: 3742850315639666298, guid: 176d400a451cf6143b5f071f5caf02cd, type: 3}
   spawnRoot: {fileID: 498382351}
   maxEnemyCount: 200
   maxEnemyInWaveCount: 50
