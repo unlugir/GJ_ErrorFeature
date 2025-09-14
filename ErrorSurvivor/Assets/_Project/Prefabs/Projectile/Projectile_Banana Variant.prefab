@@ -82,7 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8307159501400255128, guid: 0090b33403d6f344295dd59a18f8a62b, type: 3}
       propertyPath: explodeOnDeath
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307159501400255128, guid: 0090b33403d6f344295dd59a18f8a62b, type: 3}
+      propertyPath: explosionRadius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
