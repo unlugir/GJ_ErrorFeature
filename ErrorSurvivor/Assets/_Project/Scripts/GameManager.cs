@@ -24,6 +24,8 @@ namespace ErrorSpace
 
         private void Start()
         {
+            Application.targetFrameRate = 90;
+            Application.runInBackground = true;
             MusicManager.Main.PlayFromLibrary("Main Track");
             PlayerSystem.OnPlayerDeath.AddListener(()=> menuPanel.SetActive(true));
             //StartGame();
