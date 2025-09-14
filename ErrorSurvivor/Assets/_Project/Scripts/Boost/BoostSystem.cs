@@ -71,7 +71,7 @@ namespace ErrorSpace
         public void SpawnRandomBoost(Vector3 position)
         {
             //https://music.youtube.com/watch?v=3A2x-7HawDc&list=RDAMVMA0Kk0zcuAy8
-            if (Random.Range(1, 10) == 1)
+            if (Random.Range(1, 15) == 1)
             {
                 WorldBoost boost;
                 if (Random.Range(0, 2) == 1)
@@ -99,6 +99,7 @@ namespace ErrorSpace
         
         public void AddBoost(Boost boost)
         {
+            if (PlayerSystem.Player.HealthDamageable.IsDead) return;
             if (!Mathf.Approximately(boost.Duration, -1))
                 _boosts.Add(boost);
             
