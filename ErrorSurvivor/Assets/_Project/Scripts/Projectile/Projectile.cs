@@ -84,6 +84,7 @@ namespace ErrorSpace
         }
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (_dead) return;
             Die();
             var damageable = other.gameObject.GetComponent(typeof(IDamageable)) as IDamageable;
             if (damageable == null) return;
