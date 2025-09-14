@@ -39,7 +39,10 @@ namespace ErrorSpace
                 
                 var ability = abilities[Random.Range(0, abilities.Count)];
                 string description = ability.Level == 0 ? newAbilityText : "";
-                description += "Increase damage and reduce cooldown";
+                if (ability.Level == 0)
+                    description += "Cool skill!";
+                else
+                    description += "+5% Damage\n-5% Cooldown";
                 var upgrade = new AbilityUpgrade(ability, description);
                 
                 upgrades.Add(upgrade);

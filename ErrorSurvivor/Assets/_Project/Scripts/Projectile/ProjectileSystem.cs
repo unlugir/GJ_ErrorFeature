@@ -36,7 +36,7 @@ namespace ErrorSpace
             projectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
           
             projectile.Initialize(this);
-            projectile.damage += (GameSettings.Settings.damageIncreasePerLevel * (projectileAbility.Level - 1));
+            projectile.damage += (projectile.damage * (GameSettings.Settings.damageIncreasePerLevel * (projectileAbility.Level - 1)));
             projectile.SetVFXColor(projectileAbility.Config.RelatedColor);
             _projectiles.Add(projectile);
         }

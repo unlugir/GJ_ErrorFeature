@@ -28,7 +28,7 @@ namespace ErrorSpace
 
         private int HealthFormula(int defaultHealth, int level)
         {
-            defaultHealth += Mathf.RoundToInt(level * 1.5f);
+            defaultHealth += Mathf.RoundToInt(defaultHealth * (level * 0.75f));
             return defaultHealth;
         }
         private void SwapSprite()

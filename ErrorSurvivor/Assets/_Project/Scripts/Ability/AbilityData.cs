@@ -19,7 +19,7 @@ namespace ErrorSpace
         public int Level { get; private set; }
         public float Cooldown => Config.BaseCooldown 
                                  * PlayerSystem.PlayerStats.Stats[Stats.CooldownMultiplier] 
-                                 * (1 - GameSettings.Settings.cooldownReductionPerLevel * (Level - 1));
+                                 * (1 - GameSettings.Settings.cooldownReductionPerLevel * Level);
         public float Cooldown01 => 1 - Mathf.Clamp01((float)(DateTime.UtcNow - LastUseTime).TotalSeconds / (Cooldown));
         
         private Ability() { }
