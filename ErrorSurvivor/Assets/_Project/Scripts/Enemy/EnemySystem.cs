@@ -21,6 +21,7 @@ namespace ErrorSpace
         [SerializeField] private int maxEnemyInWaveCount = 50;
         [SerializeField] private float waveTimeDelay = 10f;
         [SerializeField] private Tilemap backgroundTilemap;
+        [SerializeField] private Camera camera;
 
         private int _currentEnemyCount = 0;
         private bool _shouldSpawn = true;
@@ -81,6 +82,7 @@ namespace ErrorSpace
                 world.SetMinMax(Vector3.Min(worldMin, worldMax), Vector3.Max(worldMin, worldMax));
 
                 var randomPoint = GetRandomPointOutsideTheCamera();
+                randomPoint = new Vector3(randomPoint.x, randomPoint.y, 0);
                 if(world.Contains(randomPoint)) return randomPoint;
             }
 
@@ -91,7 +93,7 @@ namespace ErrorSpace
         {
             var randomVector = GetRandomPoint();
             randomVector.z = 10f; 
-            return Camera.main.ViewportToWorldPoint(randomVector);
+            return camera.ViewportToWorldPoint(randomVector);
         }
 
         private Vector3 GetRandomPoint()
