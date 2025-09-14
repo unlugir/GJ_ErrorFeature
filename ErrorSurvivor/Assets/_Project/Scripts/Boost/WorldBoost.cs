@@ -8,8 +8,8 @@ namespace ErrorSpace
         [SerializeField] private Boost boost;
         private void OnTriggerEnter2D(Collider2D other)
         {
-            BoostSystem.OnBoostPickedUp.Invoke(boost);
-            Destroy(this.gameObject);
+            BoostSystem.OnBoostPickedUp.Invoke(boost.Copy());
+            this.gameObject.SetActive(false);
         }
     }
 }

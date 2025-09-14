@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,5 +15,17 @@ namespace ErrorSpace
             Duration = duration;
             Stats.Add(new StatValuePair(){ stat = stat, value = boost });
         }
+
+        public Boost Copy()
+        {
+            var boost = new Boost();
+            foreach (var stat in Stats)
+            {
+                boost.Add(stat.stat, stat.value);
+            }
+            boost.Duration = Duration;
+            return boost;
+        }
+        
     }
 }

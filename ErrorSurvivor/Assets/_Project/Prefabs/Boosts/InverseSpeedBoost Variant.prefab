@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 890555835910467761, guid: e63146c7a5a61844ba275d3014108452, type: 3}
       propertyPath: boost.Duration
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 890555835910467761, guid: e63146c7a5a61844ba275d3014108452, type: 3}
       propertyPath: boost.Stats.Array.size

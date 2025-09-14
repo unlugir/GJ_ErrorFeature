@@ -10182,6 +10182,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e71f197237448488de053a41d49866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  experienceBoostPrefab: {fileID: 3178949597037775437, guid: 3828c2dd7d1ba84418a69cc71b3eda92, type: 3}
+  speedBoostPrefab: {fileID: 4051649414676729300, guid: 0702c068a695cb84fa71395feecdf8c0, type: 3}
+  healthBoostPrefab: {fileID: 5293525207882358160, guid: 7b13bc279e1938b4f8f09ad35a44bdba, type: 3}
+  experiencePoolStartingAmount: 200
+  otherBoostPoolStartingAmount: 20
 --- !u!224 &1976132440 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3935659634879435545, guid: 14bc5d19b3819ff41aa84580ab0e1f1f, type: 3}
