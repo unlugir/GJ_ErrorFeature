@@ -17,10 +17,10 @@ namespace ErrorSpace
         
         [SerializeField] private int experiencePoolStartingAmount;
         [SerializeField] private int otherBoostPoolStartingAmount;
-        
-        private List<WorldBoost> _experiencePool;
-        private List<WorldBoost> _speedPool;
-        private List<WorldBoost> _healthPool;
+
+        private List<WorldBoost> _experiencePool = new();
+        private List<WorldBoost> _speedPool = new();
+        private List<WorldBoost> _healthPool = new();
 
         
         private List<Boost> _boosts = new();

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -21,25 +22,26 @@ namespace ErrorSpace
         [SerializeField] private float waveTimeDelay = 10f;
         [SerializeField] private Tilemap backgroundTilemap;
 
-        private int currentEnemyCount = 0;
-        private bool shouldSpawn = true;
-        
+        private int _currentEnemyCount = 0;
+        private bool _shouldSpawn = true;
+        private Coroutine _spawnCoroutine;
         private void Start()
         {
-            GenerateEnemies();
         }
 
         public void Initialize()
         {
-            
+            if (_spawnCoroutine != null)
+                StopCoroutine(_spawnCoroutine);
+            _spawnCoroutine = StartCoroutine(GenerateEnemies());
         }
         
-        private async void GenerateEnemies()
+        private IEnumerator GenerateEnemies()
         {
-            while (shouldSpawn)
+            while (_shouldSpawn)
             {
                 GenerateWave();
-                await UniTask.Delay(TimeSpan.FromSeconds(waveTimeDelay), ignoreTimeScale: false);
+                yield return new WaitForSeconds(waveTimeDelay);
             }
         }
         
@@ -48,7 +50,7 @@ namespace ErrorSpace
         {
             for (int index = 0; index < maxEnemyInWaveCount; index++)
             {
-                if(maxEnemyCount <= currentEnemyCount) return;
+                if(maxEnemyCount <= _currentEnemyCount) return;
 
                 var randomPoint = TryGetRandomPointInBounds();
                 if(randomPoint.Equals(Vector3.zero)) continue;
@@ -56,8 +58,8 @@ namespace ErrorSpace
                 Enemy spawnedEnemy = Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], randomPoint, Quaternion.identity, spawnRoot);
                 spawnedEnemy.Initialise();
                 
-                spawnedEnemy.OnDeath.AddListener(() => { currentEnemyCount--;});
-                currentEnemyCount++;
+                spawnedEnemy.OnDeath.AddListener(() => { _currentEnemyCount--;});
+                _currentEnemyCount++;
             }
         }
 

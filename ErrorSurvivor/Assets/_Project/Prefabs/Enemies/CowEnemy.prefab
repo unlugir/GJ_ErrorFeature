@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CowEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4030481929109642308, guid: 737cb0d82a9361a448aaa77ba88a63f3, type: 3}
+      propertyPath: damage
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8642693374569868114, guid: 737cb0d82a9361a448aaa77ba88a63f3, type: 3}
       propertyPath: <Health>k__BackingField
       value: 25
