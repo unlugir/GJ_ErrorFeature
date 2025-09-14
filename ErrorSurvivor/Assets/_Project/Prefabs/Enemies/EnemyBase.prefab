@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6912061539729380432}
   - component: {fileID: 4420362004554673918}
   - component: {fileID: 1807617053673265976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2025448721
   m_SortingLayer: 4
-  m_SortingOrder: 11
+  m_SortingOrder: 9
   m_Sprite: {fileID: -3856219906428729161, guid: 76b2b36ec3ebbec4c91ae59fd9d3e49e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446558eed7da6c443a26de5f06614a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Health>k__BackingField: 25
   enemyVariation:
   - {fileID: 5364215132022751228, guid: 76b2b36ec3ebbec4c91ae59fd9d3e49e, type: 3}
   - {fileID: -3856219906428729161, guid: 76b2b36ec3ebbec4c91ae59fd9d3e49e, type: 3}
@@ -112,6 +113,7 @@ MonoBehaviour:
   - {fileID: -5770714813506183258, guid: 76b2b36ec3ebbec4c91ae59fd9d3e49e, type: 3}
   - {fileID: -7729526031309585338, guid: 76b2b36ec3ebbec4c91ae59fd9d3e49e, type: 3}
   enemySprite: {fileID: 3581306253909012812}
+  enemyPathfinding: {fileID: 0}
 --- !u!195 &5718588049218014260
 NavMeshAgent:
   m_ObjectHideFlags: 0

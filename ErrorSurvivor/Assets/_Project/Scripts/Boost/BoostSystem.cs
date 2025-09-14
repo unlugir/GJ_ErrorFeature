@@ -25,8 +25,10 @@ namespace ErrorSpace
         
         private List<Boost> _boosts = new();
 
+        
         private void Start()
         {
+            EnemySystem.OnDeath.AddListener(e=>SpawnRandomBoost(e.transform.position));
             _experiencePool = new List<WorldBoost>(experiencePoolStartingAmount * 2);
             _speedPool = new List<WorldBoost>(otherBoostPoolStartingAmount * 2);
             _healthPool = new List<WorldBoost>(otherBoostPoolStartingAmount * 2);

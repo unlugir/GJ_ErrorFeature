@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 namespace ErrorSpace
 {
     public class EnemySystem : MonoBehaviour
     {
+        public static UnityEvent<Enemy> OnDeath { get; private set; } = new();
         [SerializeField] private List<Enemy> enemyPrefabs;
         [SerializeField] private List<Collider2D> spawnLocations;
         [SerializeField] private Transform spawnRoot;

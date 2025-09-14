@@ -50,7 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575234287459078029, guid: 737cb0d82a9361a448aaa77ba88a63f3, type: 3}
       propertyPath: m_Name
-      value: CowBase Variant
+      value: CowEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642693374569868114, guid: 737cb0d82a9361a448aaa77ba88a63f3, type: 3}
+      propertyPath: <Health>k__BackingField
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
